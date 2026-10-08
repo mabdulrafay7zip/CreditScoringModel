@@ -1,6 +1,6 @@
 # Credit Scoring Model
 
-**CodeAlpha Machine Learning Internship — Task Project**
+**Machine Learning Project**
 
 ## Problem
 Banks and lenders need to decide whether a loan applicant is likely to repay.
@@ -59,7 +59,7 @@ Results are printed in the terminal and saved to `outputs/` (plots + `metrics.js
 
 ## Project Structure
 ```
-CodeAlpha_CreditScoringModel/
+CreditScoringModel/
 ├── credit_scoring.py
 ├── requirements.txt
 ├── README.md
@@ -73,4 +73,4 @@ CodeAlpha_CreditScoringModel/
 ```
 
 ---
-**Author: Muhammad Abdul Rafay — CodeAlpha ML Intern**
+**Author: Muhammad Abdul Rafay — ML Intern**

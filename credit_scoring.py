@@ -1,6 +1,6 @@
 """
-Credit Scoring Model — CodeAlpha Machine Learning Internship
-Author: Muhammad Abdul Rafay — CodeAlpha ML Intern
+Credit Scoring Model — Machine Learning Project
+Author: Muhammad Abdul Rafay — ML Intern
 
 Predicts whether a loan applicant is creditworthy (good / bad credit risk)
 using the German Credit dataset (UCI Machine Learning Repository).

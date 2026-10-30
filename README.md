@@ -57,6 +57,22 @@ python credit_scoring.py
 ```
 Results are printed in the terminal and saved to `outputs/` (plots + `metrics.json`).
 
+## Interpreting the output
+
+- On the first run the script prints `Downloading German Credit dataset from UCI...`
+  and `Saved cached copy to .../data/german_credit.csv`; on later runs it prints
+  `Loading cached dataset: ...` instead, so no download is needed again.
+- `Dataset shape: (1000, 21)` is the 1,000 applicants with 20 features plus the
+  target, and the target distribution line reads `{1: 700, 0: 300}`
+  (`1 = good`, `0 = bad`) before the 80 / 20 stratified split.
+- For each model, a `--- Model name ---` block prints a classification report
+  with `Bad risk` and `Good risk` rows; the Results table above quotes the
+  `Good risk` row's precision, recall and F1 for each model.
+- The final `=== Summary ===` table repeats both models' accuracy, precision,
+  recall and F1, and the run ends with `Plots and metrics saved in: .../outputs`.
+  In each confusion-matrix plot, rows are the actual class and columns are the
+  predicted class, labelled `Bad risk` / `Good risk`.
+
 ## Project Structure
 ```
 CreditScoringModel/

@@ -50,6 +50,12 @@ Full metrics: [`outputs/metrics.json`](outputs/metrics.json)
 ![Model comparison](outputs/model_comparison.png)
 ![Random Forest confusion matrix](outputs/confusion_matrix_random_forest.png)
 
+## How to read the plots
+
+- The model-comparison chart has one bar group per model, with four bars in each group — accuracy, precision, recall and F1 (the last three are for the good-risk class, as in the Results table) — on a 0–1 scale. Random Forest's bars are taller than Logistic Regression's on all four, which is why it is the best model in the table.
+- Each confusion-matrix plot shows counts, not rates: rows are the actual class and columns are the predicted class, labelled `Bad risk` / `Good risk`. For Random Forest the matrix is 25 bad applicants correctly refused and 125 good applicants correctly approved, with 35 bad applicants approved by mistake and 15 good applicants turned away.
+- The two mistakes do not cost the same: a bad-risk applicant approved as good (35 for Random Forest, 33 for Logistic Regression) is the expensive error — a loan that may not be repaid — while a good applicant refused (15 vs 26) is lost business. Random Forest wins because it approves far more good applicants (125 vs 114) while making almost the same number of costly false-good mistakes (35 vs 33).
+
 ## How to Run
 ```bash
 pip install -r requirements.txt
